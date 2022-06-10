@@ -6,6 +6,11 @@ Call KillProcess("UFT.exe")
 Call KillProcess("QtpAutomationAgent.exe")
 Call KillProcess("iexplore.exe")
 
+Dim objShell
+Set objShell = WScript.CreateObject( "WScript.Shell" )
+objShell.Run("C:\Program Files (x86)\Micro Focus\UFT One\samples\Flights Application\FlightsGUI.exe")
+Set objShell = Nothing
+
 'Create QTP object
 ConsoleOutputBlankLine(1)
 Set QTP = CreateObject("QuickTest.Application")
